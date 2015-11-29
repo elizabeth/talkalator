@@ -12,6 +12,11 @@ angular.module('talkalatorApp', ['ui.router'])
                 url: '/settings',
                 templateUrl: 'views/settings.html',
                 controller: 'settingsController'
+            })
+            .state('start', {
+                url: '/',
+                templateUrl: 'views/start.html',
+                controller: 'startController'
             });
         $urlRouterProvider.otherwise('/');
     })
@@ -22,4 +27,8 @@ angular.module('talkalatorApp', ['ui.router'])
     })
     .controller('settingsController', function() {
         //do nothing
-});
+
+    })
+    .controller('startController', function() {
+        //do nothing
+    });

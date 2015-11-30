@@ -13,10 +13,10 @@ angular.module('talkalatorApp', ['ui.router'])
                 templateUrl: 'views/settings.html',
                 controller: 'settingsController'
             })
-            .state('start', {
-                url: '/',
-                templateUrl: 'views/start.html',
-                controller: 'startController'
+            .state('translate', {
+                url: '/translate',
+                templateUrl: 'views/translate.html',
+                controller: 'translateController'
             });
         $urlRouterProvider.otherwise('/');
     })
@@ -25,10 +25,23 @@ angular.module('talkalatorApp', ['ui.router'])
             $location.path("settings");
         };
     })
-    .controller('settingsController', function() {
-        //do nothing
+    .controller('settingsController', function($scope, $location) {
+        $scope.start = function() {
+            $location.path("translate");
+        };
 
     })
-    .controller('startController', function() {
-        //do nothing
+    .controller('translateController', function($scope) {
+        $scope.begin = function() {
+            $("#translate").hide(function() {
+                $("#translate").show();
+            });
+            $("#translatedAudio").hide();
+        };
+
+        $scope.translate = function() {
+            $("#translatedAudio").show(function() {
+                $("#translatedAudio").trigger('play');
+            });
+        };
     });

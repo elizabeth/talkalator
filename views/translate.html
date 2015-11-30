@@ -1,0 +1,18 @@
+<h1>Translate to Chinese</h1>
+
+<div class="form-group">
+    <input class="btn btn-default" type="button" value="Start recording" ng-click="begin()"/>
+</div>
+
+<div class="form-group">
+    <input id="translate" class="btn btn-default" type="button" value="Stop and translate" style="display:none;"
+       ng-click="translate()"/>
+</div>
+
+<audio id="translatedAudio" style="display:none" controls preload="none">
+    <source src="http://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+</audio>
+
+<footer>
+    <small><a href="#/settings">Set preferences</a></small>
+</footer>

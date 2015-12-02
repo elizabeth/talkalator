@@ -53,9 +53,9 @@ angular.module('talkalatorApp', ['ui.router'])
 
         function setAudio() {
             var audio;
-            
+
             $.ajax({
-                url:'../php/translate.php',
+                url:'/php/translate.php',
                 complete: function (response) {
                     audio = response;
                 },

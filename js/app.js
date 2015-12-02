@@ -53,7 +53,7 @@ angular.module('talkalatorApp', ['ui.router'])
 
         function setAudio() {
             if ($scope.language == 'Chinese') {
-                $('#audio').attr('src', 'php/translate.php');
+                $('#audio').attr('src', 'http://www.w3schools.com/html/horse.mp3');
             } else if ($scope.language == 'Hindi') {
                 $('#audio').attr('src', 'http://www.w3schools.com/html/horse.mp3');
             } else if ($scope.language == 'Spanish') {

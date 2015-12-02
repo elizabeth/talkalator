@@ -45,28 +45,12 @@ angular.module('talkalatorApp', ['ui.router'])
     .controller('translateController', function($scope, language) {
         if (language.savedData) {
             $scope.language = language.savedData;
-            setAudio()
         } else {
             $scope.language = 'Chinese';
-            setAudio()
         }
 
-        function setAudio() {
-            var audio;
-
-            $.ajax({
-                url:'php/translate.php',
-                complete: function (response) {
-                    audio = response;
-                },
-                error: function () {
-                    $('#output').html('Bummer: there was an error!');
-                }
-            });
-
-
             if ($scope.language == 'Chinese') {
-                $('#audio').attr('src', audio);
+                $('#audio').attr('src', 'php/translate.php');
             } else if ($scope.language == 'Hindi') {
                 $('#audio').attr('src', 'http://www.w3schools.com/html/horse.mp3')
             } else if ($scope.language == 'Spanish') {

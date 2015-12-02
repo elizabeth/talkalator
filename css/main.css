@@ -2,7 +2,26 @@ body {
     font-variant: small-caps;
 }
 
-footer {
+#content {
+    height: 100%;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+#settings {
+    color: #474141;
+}
+
+#icon {
+    text-align: center;
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
+    z-index: -10;
+}
+
+#icon img {
+    opacity: 0.8;
+    width: 215px;
 }

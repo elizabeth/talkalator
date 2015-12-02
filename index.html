@@ -4,7 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Talkalator</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/page-icon.png">
 
@@ -24,7 +27,11 @@
 
 <body ng-app="talkalatorApp">
     <div class="container-fluid">
-        <div class="col-xs-12" ui-view>
+        <div id="content" class="col-md-4">
+            <a href="#/index.html"><img src="img/talkalator-name.png" alt="talkalator"/></a>
+            <div ui-view></div>
+
+            <div id="icon"><img src="img/talkalator-icon.png"/></div>
         </div>
     </div>
 

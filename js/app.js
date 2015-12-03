@@ -52,12 +52,13 @@ angular.module('talkalatorApp', ['ui.router'])
         }
 
         function setAudio() {
+            var url = 'http://api.voicerss.org/?key=0939b85175fb460b9d6da343211d2cd3&r=-4&src=';
             if ($scope.language == 'Chinese') {
-                $('#audio').attr('src', 'http://www.w3schools.com/html/horse.mp3');
+                $('#audio').attr('src', url + '嗨，你好吗&hl=zh-cn');
             } else if ($scope.language == 'Hindi') {
-                $('#audio').attr('src', 'http://www.w3schools.com/html/horse.mp3');
+                $('#audio').attr('src', url + 'hi%20how%20are%20you&hl=zh-cn');
             } else if ($scope.language == 'Spanish') {
-                $('#audio').attr('src', 'http://www.w3schools.com/html/horse.mp3');
+                $('#audio').attr('src', url + 'hola%20como%20estas&hl=es-mx');
             }
         }
 

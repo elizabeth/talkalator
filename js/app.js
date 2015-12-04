@@ -41,8 +41,12 @@ angular.module('syncApp', ['ui.router'])
         $scope.start = function() {
             $location.path("translate");
             language.savedData = $scope.lang;
-
         };
+
+        $scope.go = function() {
+            $location.path("translate");
+        };
+
         if (!$scope.lang) {
             $scope.lang = 'Chinese';
         }
@@ -75,8 +79,10 @@ angular.module('syncApp', ['ui.router'])
         };
 
         $scope.translate = function() {
-            $("#translatedAudio").show(function() {
-                $("#translatedAudio").trigger('play');
+            $("#translate").hide(function() {
+                $("#translatedAudio").show(function() {
+                    $("#translatedAudio").trigger('play');
+                });
             });
         };
 

@@ -1,4 +1,4 @@
-angular.module('talkalatorApp', ['ui.router'])
+angular.module('syncApp', ['ui.router'])
     .factory('language', function() {
         var savedData = null;
 
@@ -29,7 +29,7 @@ angular.module('talkalatorApp', ['ui.router'])
     })
     .controller('homeController', function($scope, $location) {
         $("#detected").delay(5000).queue(function() {
-            $(this).html("Talkalator earpiece detected");
+            $(this).html("Sync earpiece detected");
             $("#begin").show();
         });
 

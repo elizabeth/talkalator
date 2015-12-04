@@ -28,6 +28,11 @@ angular.module('talkalatorApp', ['ui.router'])
         $urlRouterProvider.otherwise('/');
     })
     .controller('homeController', function($scope, $location) {
+        $("#detected").delay(5000).queue(function() {
+            $(this).html("Talkalator earpiece detected");
+            $("#begin").show();
+        });
+
         $scope.settings = function() {
             $location.path("settings");
         };

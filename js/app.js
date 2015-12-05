@@ -65,7 +65,7 @@ angular.module('syncApp', ['ui.router'])
             if ($scope.language == 'Chinese') {
                 $('#audio').attr('src', url + '嗨，你好吗&hl=zh-cn');
             } else if ($scope.language == 'Hindi') {
-                $('#audio').attr('src', url + 'hi%20how%20are%20you&hl=zh-cn');
+                $('#audio').attr('src', 'audio/hindi_audio.m4a');
             } else if ($scope.language == 'Spanish') {
                 $('#audio').attr('src', url + 'hola%20como%20estas&hl=es-mx');
             }
